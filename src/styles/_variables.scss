@@ -1,0 +1,50 @@
+// sass global breakpoints
+@mixin breakpoint($breakpoint) {
+    @if $breakpoint==toSmall {
+        @media (max-width: 575px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==fromSmall {
+        @media (min-width: 576px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==fromMedium {
+        @media (min-width: 768px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==fromLarge {
+        @media (min-width: 992px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==toLarger {
+        @media (max-width: 1199px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==fromLarger {
+        @media (min-width: 1200px) {
+            @content
+        }
+
+        ;
+    }
+}
